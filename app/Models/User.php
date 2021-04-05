@@ -43,7 +43,7 @@ class User extends Authenticatable
 
     public function personalRoles()
     {
-        return $this->belongsToMany(Role::class, 'user_role', 'user_id', 'role_id')
+        return $this->belongsToMany(AppRole::class, 'user_role', 'user_id', 'role_id')
                     ->using(UserRole::class);
     }
 }
